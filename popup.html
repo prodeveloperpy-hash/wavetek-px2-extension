@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Wavetek PX2 POC</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <header>
+      <div class="mark">W</div>
+      <div><h1>Wavetek</h1><p>PX2 connection proof of concept</p></div>
+      <span id="statusDot" class="dot idle" title="Not tested"></span>
+    </header>
+
+    <section class="card">
+      <div class="row split">
+        <label class="switch-label">Mock mode <input id="mockMode" type="checkbox" checked></label>
+        <span class="hint">Use without hardware</span>
+      </div>
+      <label>PX2 base URL
+        <input id="baseUrl" type="url" value="http://192.168.168.1" placeholder="http://192.168.168.1">
+      </label>
+      <div class="grid">
+        <label>Username<input id="username" autocomplete="username"></label>
+        <label>Password<input id="password" type="password" autocomplete="current-password"></label>
+      </div>
+      <label>Authentication
+        <select id="authType">
+          <option value="basic">HTTP Basic</option>
+          <option value="form">Web form/session</option>
+          <option value="none">None / existing session</option>
+        </select>
+      </label>
+      <button id="connect" class="primary">Test connection</button>
+      <p id="connectionResult" class="result" aria-live="polite"></p>
+    </section>
+
+    <section class="card">
+      <h2>POC setting</h2>
+      <label>Setting name<input id="settingName" value="device_name"></label>
+      <label>Current / new value<input id="settingValue" value="Wavetek-PX2"></label>
+      <div class="actions">
+        <button id="read">Read setting</button>
+        <button id="write" class="primary">Apply setting</button>
+      </div>
+      <p id="settingResult" class="result" aria-live="polite"></p>
+    </section>
+
+    <details class="card advanced">
+      <summary>Endpoint configuration</summary>
+      <label>Connection path<input id="connectionPath" value="/"></label>
+      <label>Login path<input id="loginPath" value="/login"></label>
+      <label>Read path<input id="readPath" value="/api/settings/{name}"></label>
+      <label>Write path<input id="writePath" value="/api/settings/{name}"></label>
+      <label>Write method
+        <select id="writeMethod"><option>POST</option><option>PUT</option><option>PATCH</option></select>
+      </label>
+      <label>Request format
+        <select id="bodyFormat"><option value="json">JSON</option><option value="form">Form URL encoded</option></select>
+      </label>
+      <p class="hint">Replace these paths after inspecting the PX2 WebUI Network requests.</p>
+    </details>
+    <footer>Local communication only. Credentials are kept in memory and are not saved.</footer>
+  </main>
+  <script src="popup.js"></script>
+</body>
+</html>

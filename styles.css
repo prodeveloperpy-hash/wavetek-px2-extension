@@ -1,0 +1,22 @@
+:root { color-scheme: dark; font-family: Inter, system-ui, sans-serif; background:#07111f; color:#eaf2ff; }
+* { box-sizing:border-box; }
+body { margin:0; width:430px; min-height:600px; background:radial-gradient(circle at top right,#123b5d 0,#07111f 42%); }
+main { padding:18px; }
+header { display:flex; align-items:center; gap:11px; margin-bottom:16px; }
+.mark { width:42px; height:42px; display:grid; place-items:center; border-radius:12px; font-weight:800; font-size:22px; color:#04101d; background:linear-gradient(135deg,#34d6ff,#69f3ad); }
+h1,h2,p { margin:0; } h1 { font-size:20px; } h2 { font-size:15px; margin-bottom:12px; }
+header p,.hint,footer { color:#8fa6bd; font-size:11px; }
+.dot { margin-left:auto; width:11px; height:11px; border-radius:50%; box-shadow:0 0 0 4px #ffffff0c; }
+.dot.idle { background:#718096; }.dot.ok { background:#49e39a; }.dot.error { background:#ff6d7a; }
+.card { margin:12px 0; padding:14px; border:1px solid #ffffff16; border-radius:14px; background:#0e1b2bd9; box-shadow:0 8px 28px #0004; }
+label { display:block; margin:10px 0; color:#abc0d5; font-size:12px; }
+input,select { width:100%; margin-top:5px; padding:10px 11px; border:1px solid #294057; border-radius:9px; outline:none; background:#081421; color:#f4f8ff; }
+input:focus,select:focus { border-color:#35c8f1; box-shadow:0 0 0 3px #35c8f122; }
+.grid { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+.row,.actions { display:flex; align-items:center; gap:10px; }.split { justify-content:space-between; }
+.switch-label { display:flex; align-items:center; gap:8px; margin:0; color:#eaf2ff; }.switch-label input { width:auto; margin:0; accent-color:#34d6ff; }
+button { flex:1; padding:10px 12px; border:1px solid #31516a; border-radius:9px; cursor:pointer; background:#162c3e; color:#eaf2ff; font-weight:650; }
+button:hover { filter:brightness(1.13); }.primary { border:0; color:#04121c; background:linear-gradient(135deg,#34d6ff,#69f3ad); }
+.result { min-height:16px; margin-top:10px; font-size:12px; color:#a9bdd0; word-break:break-word; }.result.ok { color:#69f3ad; }.result.error { color:#ff8a96; }
+details summary { cursor:pointer; font-weight:700; font-size:13px; } details[open] summary { margin-bottom:10px; }
+footer { text-align:center; padding:5px 12px; }
