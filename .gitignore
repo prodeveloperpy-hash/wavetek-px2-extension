@@ -1,0 +1,17 @@
+# Operating-system and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Local packages and build output
+node_modules/
+dist/
+*.zip
+
+# Local test data and secrets
+.env
+.env.*
+*.har
+credentials.json
+

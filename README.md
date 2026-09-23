@@ -2,6 +2,10 @@
 
 This Manifest V3 extension is a safe starting point for proving communication between a browser extension and a PX2 connected over Ethernet.
 
+## Project status
+
+The browser-extension shell and mock demonstration are complete. Real PX2 authentication and setting endpoints must be captured from the device WebUI before the hardware integration can be verified.
+
 ## Current scope
 
 - Mock mode for demonstrating the flow without hardware
@@ -40,3 +44,14 @@ If the PX2 uses a challenge/response scheme, dynamically named form fields, CSRF
 - It can read one agreed setting.
 - It can change that setting and the PX2 WebUI confirms the new value.
 - Errors are shown clearly and Chrome and Edge both pass the test.
+
+## Push this repository to GitHub
+
+Create an empty GitHub repository named `wavetek-px2-extension`, then run:
+
+```powershell
+git remote add origin https://github.com/YOUR-USERNAME/wavetek-px2-extension.git
+git push -u origin main
+```
+
+Do not commit PX2 passwords, exported HAR files, session cookies, or other credentials.
